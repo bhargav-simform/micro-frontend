@@ -1,13 +1,3 @@
-declare module 'mfe-app/App' {
-  const MFEApp: React.FC
-  export default MFEApp
-}
-
-declare module 'header-app/Header' {
-  const HeaderApp: React.FC
-  export default HeaderApp
-}
-
 declare module 'mfe-app/authStore' {
   export type AuthUser = { name: string; role: 'admin' | 'viewer' }
   export type AuthState = { user: AuthUser | null; token: string | null }
@@ -20,14 +10,4 @@ declare module 'mfe-app/authStore' {
   }
   const authStore: AuthStore
   export default authStore
-}
-
-declare module 'mfe-app/Page1' {
-  const Page1: React.FC
-  export default Page1
-}
-
-declare module 'mfe-app/Page2' {
-  const Page2: React.FC
-  export default Page2
 }
