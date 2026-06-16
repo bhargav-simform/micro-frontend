@@ -11,6 +11,7 @@ export default defineConfig({
       filename: 'remoteEntry.js',
       exposes: {
         './App': './src/App.tsx',
+        './eventBus': './src/eventBus.ts',
       },
       shared: ['react', 'react-dom']
     })

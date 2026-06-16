@@ -9,6 +9,9 @@ export default defineConfig({
     federation({
       name: 'header-app',
       filename: 'remoteEntry.js',
+      remotes: {
+        'mfe-app': 'http://localhost:5001/assets/remoteEntry.js',
+      },
       exposes: {
         './Header': './src/App.tsx'
       },
