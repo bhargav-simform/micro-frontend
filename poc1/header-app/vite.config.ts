@@ -12,7 +12,7 @@ export default defineConfig({
       exposes: {
         './Header': './src/App.tsx'
       },
-      shared: ['react', 'react-dom']
+      shared: ['react', 'react-dom', 'react-router-dom']
     })
   ],
 

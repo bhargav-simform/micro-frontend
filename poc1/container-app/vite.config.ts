@@ -12,7 +12,7 @@ export default defineConfig({
         'mfe-app' : 'http://localhost:5001/assets/remoteEntry.js',
         'header-app' : 'http://localhost:5002/assets/remoteEntry.js'
       },
-      shared: ['react', 'react-dom']
+      shared: ['react', 'react-dom', 'react-router-dom']
     })
   ],
   build: {
