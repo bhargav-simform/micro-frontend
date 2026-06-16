@@ -1,0 +1,12 @@
+@import "tailwindcss";
+
+/*
+ * DEMO: a deliberately "leaky" global rule from the CONTAINER.
+ * Any element with class `demo-box` anywhere in the global DOM gets
+ * a red dashed outline. This is the collision we use to test isolation:
+ *  - header-app (prefixed tailwind): coexists, but shares this global scope
+ *  - mfe-app (Shadow DOM): sealed off — this rule CANNOT reach inside it
+ */
+.demo-box {
+  outline: 3px dashed red !important;
+}

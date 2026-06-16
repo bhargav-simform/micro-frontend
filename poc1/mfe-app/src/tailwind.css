@@ -1,0 +1,8 @@
+/*
+ * DEMO strategy: SHADOW DOM isolation.
+ * This stylesheet is imported as a raw string (?inline) and injected
+ * into a shadow root, so its scope is fully sealed: none of these
+ * tailwind rules leak OUT to the host, and no global rule from the
+ * container (e.g. the `.demo-box` red outline) can leak IN.
+ */
+@import "tailwindcss";

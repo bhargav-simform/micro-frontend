@@ -1,0 +1,8 @@
+/*
+ * DEMO strategy: Tailwind PREFIX isolation.
+ * Every utility class is namespaced `hdr:` (e.g. hdr:flex, hdr:p-4).
+ * Because the classnames are unique, header-app's utilities can never
+ * collide with the container's or any other MFE's tailwind classes,
+ * even though they all live in the same global stylesheet.
+ */
+@import "tailwindcss" prefix(hdr);
