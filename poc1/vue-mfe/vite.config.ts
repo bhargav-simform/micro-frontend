@@ -1,22 +1,24 @@
 import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react'
+import vue from '@vitejs/plugin-vue'
 import federation from '@originjs/vite-plugin-federation'
 
 export default defineConfig({
   define: {
     __MFE_VERSION__: JSON.stringify('1.0.0'),
-    __MFE_NAME__: JSON.stringify('mfe-app'),
+    __MFE_NAME__: JSON.stringify('vue-mfe'),
   },
   plugins: [
-    react(),
+    vue({
+      customElement: true,
+    }),
     federation({
-      name: 'mfe-app',
+      name: 'vue-mfe',
       filename: 'remoteEntry.js',
       exposes: {
-        './App': './src/App.tsx',
-        './WorkflowSubmit': './src/components/WorkflowSubmit.tsx',
+        './bootstrap': './src/bootstrap.ts',
       },
-      shared: ['react', 'react-dom'],
+      // Vue is NOT shared — it stays isolated from the React host's module graph
+      shared: [],
     }),
   ],
   build: {
