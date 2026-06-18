@@ -1,0 +1,60 @@
+.container { display: flex; flex-direction: column; gap: 4rem; }
+
+.hero {
+  background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+  border-radius: 16px;
+  padding: 4rem 3rem;
+  color: #fff;
+  text-align: center;
+}
+
+.heroTitle { font-size: 3rem; font-weight: 800; margin: 0 0 1rem; letter-spacing: -0.03em; }
+.heroSubtitle { font-size: 1.15rem; opacity: 0.9; max-width: 580px; margin: 0 auto 2rem; line-height: 1.6; }
+
+.heroActions { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+
+.primaryCta {
+  padding: 0.75rem 2rem;
+  background: #fff;
+  color: #6366f1;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition: opacity 0.15s;
+}
+
+.primaryCta:hover { opacity: 0.9; }
+
+.secondaryCta {
+  padding: 0.75rem 2rem;
+  background: rgba(255,255,255,0.15);
+  color: #fff;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.95rem;
+  border: 1px solid rgba(255,255,255,0.4);
+  transition: background 0.15s;
+}
+
+.secondaryCta:hover { background: rgba(255,255,255,0.25); }
+
+.sectionTitle { font-size: 1.5rem; font-weight: 700; margin: 0 0 1.5rem; color: var(--text); }
+
+.featureGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.25rem;
+}
+
+.featureCard {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 1.5rem;
+}
+
+.featureCard h3 { margin: 0.5rem 0 0.4rem; font-size: 1rem; color: var(--text); }
+.featureCard p { margin: 0; font-size: 0.875rem; color: var(--text-muted); line-height: 1.5; }
+.featureIcon { font-size: 1.75rem; }

@@ -1,0 +1,73 @@
+.container { padding: 1.5rem; display: flex; flex-direction: column; gap: 1rem; font-family: system-ui, sans-serif; }
+
+.header { display: flex; align-items: center; justify-content: space-between; }
+.title { margin: 0; font-size: 1.25rem; font-weight: 700; }
+
+.statusBadge { font-size: 0.75rem; font-weight: 600; padding: 0.25rem 0.75rem; border-radius: 999px; }
+.valid { background: #d1fae5; color: #065f46; }
+.expired { background: #fee2e2; color: #991b1b; }
+
+.tokenInput {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  font-family: 'Fira Code', monospace;
+  font-size: 0.78rem;
+  resize: vertical;
+  outline: none;
+  box-sizing: border-box;
+  line-height: 1.5;
+}
+
+.tokenInput:focus { border-color: #6366f1; box-shadow: 0 0 0 2px rgba(99,102,241,0.15); }
+
+.error { background: #fee2e2; color: #991b1b; padding: 0.75rem; border-radius: 6px; font-size: 0.825rem; }
+
+.sections { display: flex; flex-direction: column; gap: 0.75rem; }
+
+.section { border: 1px solid #e5e7eb; border-radius: 8px; overflow: hidden; }
+
+.sectionHeader {
+  padding: 0.5rem 0.75rem;
+  background: #f9fafb;
+  border-left: 3px solid;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.sectionTitle { font-size: 0.8rem; font-weight: 700; color: #374151; text-transform: uppercase; letter-spacing: 0.05em; }
+
+.sectionBody {
+  margin: 0;
+  padding: 0.75rem;
+  font-family: 'Fira Code', monospace;
+  font-size: 0.8rem;
+  background: #1e1e2e;
+  color: #cdd6f4;
+  overflow-x: auto;
+}
+
+.signatureNote {
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  padding: 0.75rem;
+  background: #fffbeb;
+}
+
+.signatureNote span { font-size: 0.875rem; font-weight: 600; color: #92400e; }
+.signatureNote p { margin: 0.3rem 0 0; font-size: 0.78rem; color: #78350f; }
+
+.examples { display: flex; align-items: center; gap: 0.75rem; }
+.examplesLabel { font-size: 0.8rem; color: #6b7280; }
+
+.sampleBtn {
+  padding: 0.3rem 0.75rem;
+  border: 1px solid #6366f1;
+  background: transparent;
+  color: #6366f1;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  cursor: pointer;
+}
+
+.sampleBtn:hover { background: #ede9fe; }

@@ -1,0 +1,25 @@
+{
+  "name": "regex-playground",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite --port 3004 --strictPort",
+    "build": "vite build",
+    "preview": "vite preview --port 3004 --strictPort",
+    "typecheck": "tsc --noEmit",
+    "lint": "eslint ."
+  },
+  "dependencies": {
+    "@devtoolhub/event-bus": "workspace:*",
+    "@devtoolhub/shared-types": "workspace:*",
+    "svelte": "^4.2.0"
+  },
+  "devDependencies": {
+    "@originjs/vite-plugin-federation": "^1.4.1",
+    "@sveltejs/vite-plugin-svelte": "^3.1.0",
+    "svelte-preprocess": "^6.0.5",
+    "typescript": "~5.5.4",
+    "vite": "^5.4.0"
+  }
+}

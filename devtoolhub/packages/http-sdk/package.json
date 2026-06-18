@@ -1,0 +1,18 @@
+{
+  "name": "@devtoolhub/http-sdk",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "main": "./src/index.ts",
+  "types": "./src/index.ts",
+  "scripts": {
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "axios": "^1.7.0"
+  },
+  "devDependencies": {
+    "@devtoolhub/shared-types": "workspace:*",
+    "typescript": "~5.5.4"
+  }
+}

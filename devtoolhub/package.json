@@ -1,0 +1,32 @@
+{
+  "name": "devtoolhub",
+  "private": true,
+  "version": "0.1.0",
+  "scripts": {
+    "dev": "pnpm --parallel -r dev",
+    "dev:host": "pnpm --filter host-shell dev",
+    "dev:registry": "pnpm --filter registry dev",
+    "typecheck:packages": "pnpm --filter './packages/**' typecheck",
+    "build:plugins": "pnpm --parallel --filter './plugins/**' build",
+    "build:host": "pnpm --filter host-shell build",
+    "build": "pnpm build:plugins && pnpm build:host",
+    "preview:plugins": "pnpm --parallel --filter './plugins/**' preview",
+    "preview:host": "pnpm --filter host-shell preview",
+    "preview": "pnpm --parallel preview:plugins preview:host",
+    "start": "pnpm build && pnpm --parallel registry:start preview:plugins preview:host",
+    "registry:start": "pnpm --filter registry dev",
+    "lint": "pnpm -r lint",
+    "typecheck": "pnpm -r typecheck"
+  },
+  "devDependencies": {
+    "typescript": "~5.5.4"
+  },
+  "pnpm": {
+    "overrides": {
+      "react": "^19.0.0",
+      "react-dom": "^19.0.0"
+    },
+    "onlyBuiltDependencies": ["esbuild"]
+  }
+}
+
